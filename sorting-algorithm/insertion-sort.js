@@ -28,7 +28,6 @@ function insertionSort(arr) {
     // Store the current element to be compared.
     const currentElement = arr[i];
     let j = i - 1;
-    -1;
 
     // Compare the current element with the elements to its left.
     // Shift larger elements to the right.
@@ -45,5 +44,15 @@ function insertionSort(arr) {
 
 // Example usage:
 const unsortedArray = [5, 2, 9, 3, 6];
-const sortedArray = insertionSort(unsortedArray);
-console.log(sortedArray);
+// 2 5 9 3 6
+// 2 5 9 3 6
+// 2 5 3 9 6
+// 2 5 3 9 6
+
+// 1st=  j=1-1-1
+// 2nd =  j=2-1-1=1 does not reasign
+// 3rd = j= 3-1-1=1
+// 4th= j= 4 - 1 - 1=2
+
+// const sortedArray = insertionSort(unsortedArray);
+// console.log(sortedArray);
