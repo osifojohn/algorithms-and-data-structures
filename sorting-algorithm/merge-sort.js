@@ -1,3 +1,4 @@
+//merge sort is a divide and conquer algorithm that divides an unsorted list into several smaller sublists, sorts those sublists and merges them back together to produce a sigle sorted list
 function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
@@ -9,7 +10,7 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 const mergedResult = mergeSort([4, 3, 2, 10, 12, 1, 5, 6]);
-console.log(mergedResult);
+// console.log(mergedResult);
 
 function merge(arr1, arr2) {
   let merged = [];

@@ -20,39 +20,3 @@
 // 1 2 5 3 6 4
 // 1 2 3 5 6 4
 // 1 2 3 4 5 6
-
-function insertionSort(arr) {
-  const n = arr.length;
-
-  for (let i = 1; i < n; i++) {
-    // Store the current element to be compared.
-    const currentElement = arr[i];
-    let j = i - 1;
-
-    // Compare the current element with the elements to its left.
-    // Shift larger elements to the right.
-    while (j >= 0 && arr[j] > currentElement) {
-      arr[j + 1] = arr[j];
-      j--;
-    }
-
-    // Place the current element in its correct position.
-    arr[j + 1] = currentElement;
-  }
-  return arr;
-}
-
-// Example usage:
-const unsortedArray = [5, 2, 9, 3, 6];
-// 2 5 9 3 6
-// 2 5 9 3 6
-// 2 5 3 9 6
-// 2 5 3 9 6
-
-// 1st=  j=1-1-1
-// 2nd =  j=2-1-1=1 does not reasign
-// 3rd = j= 3-1-1=1
-// 4th= j= 4 - 1 - 1=2
-
-// const sortedArray = insertionSort(unsortedArray);
-// console.log(sortedArray);
